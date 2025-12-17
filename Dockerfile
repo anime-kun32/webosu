@@ -1,12 +1,10 @@
-FROM node:20-alpine
+FROM nginx:alpine
 
-RUN apk add --no-cache nginx
+# Copy your static files
+COPY public/ /usr/share/nginx/html/
 
-WORKDIR /app
-
-COPY . .
-COPY docker/nginx.conf /etc/nginx/nginx.conf
-
+# Expose port 80
 EXPOSE 80
 
-CMD sh -c "node api.js & nginx -g 'daemon off;'"
+# Start nginx (default command in nginx image)
+CMD ["nginx", "-g", "daemon off;"]
