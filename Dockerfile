@@ -4,9 +4,6 @@ RUN apk add --no-cache nginx
 
 WORKDIR /app
 
-COPY package*.json ./
-RUN npm install || true
-
 COPY . .
 COPY docker/nginx.conf /etc/nginx/nginx.conf
 
