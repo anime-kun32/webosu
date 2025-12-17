@@ -1,7 +1,7 @@
 const http = require('http');
 const url = require('url');
 
-const hostname = '127.0.0.1';
+const hostname = '0.0.0.0';
 const postport = 3000;
 const getport = 3001;
 
