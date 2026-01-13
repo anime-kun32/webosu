@@ -53,7 +53,7 @@ function startdownload(box) {
 	if (box.downloading) {
 		return;
 	}
-	let url = "https://api.nerinyan.moe/d/" + box.sid;
+	let url = "https://catboy.best/d/" + box.sid;
 	box.downloading = true;
     box.classList.add("downloading");
     let xhr = new XMLHttpRequest();
